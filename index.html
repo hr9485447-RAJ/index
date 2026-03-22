@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorry Baby 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #dfff9a, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+    h1 {
+      color: #ff4d6d;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #yes {
+      background-color: #6bff4d;
+      color: white;
+    }
+    #no {
+      background-color: #ccc;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Sorry Baby 🥺</h1>
+    <p>Mujhse galti ho gayi... please gussa mat ho 💕</p>
+    <p>Kya tum mujhe maaf karogi? 😔</p>
+    <button id="yes" onclick="love()">Haan 💖</button>
+    <button id="no" onclick="moveButton()">Nahi 😒</button>
+  </div>
+
+  <script>
+    function love() {
+      document.body.innerHTML = "<h1 style='color:white;'>Yayyy 😍 I love youuu meli Raniiiiiii💖</h1>";
+    }
+
+    function moveButton() {
+      const btn = document.getElementById("no");
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      btn.style.position = "absolute";
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
